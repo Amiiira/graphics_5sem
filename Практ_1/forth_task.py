@@ -8,7 +8,6 @@ matrix = np.array([[1, 3], [4, 1]])
 WHITE = (255, 255, 255)
 LAVANDER = (243, 134, 236)
 DARKCYAN = (0, 139, 139)
-SANDY = (244, 164, 96)
 
 def transformation(x, y, x2, y2):
     points_matrix = np.array([[x, y], [x2, y2]])
@@ -31,11 +30,11 @@ def circles(x, y, x2, y2, new_x, new_y, new_x2, new_y2):
             # Введеные координаты
             pg.draw.line(sc, LAVANDER, [x, y],[x2, y2], 5)
             font = pg.font.Font(None, 30)
-            text = font.render(f"a=({x},{y}), b=({x2},{y2})", True, DARKCYAN)
+            text = font.render(f"a=({x},{y}), b=({x2},{y2})", True, LAVANDER)
             sc.blit(text, (x+10, y))
 
             # Новые координаты
-            pg.draw.line(sc, SANDY, [new_x, new_y],[new_x2, new_y2], 5)
+            pg.draw.line(sc, DARKCYAN, [new_x, new_y],[new_x2, new_y2], 5)
             font = pg.font.Font(None, 30)
             text = font.render(f"c=({new_x},{new_y}), d=({new_x2},{new_y2})", True, DARKCYAN)
             sc.blit(text, (new_x+10, new_y))
