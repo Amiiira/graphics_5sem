@@ -9,9 +9,9 @@ from pygame.locals import *
 rf = g.ReferenceFrame(g.Origin(20, 580), g.Unit(65), g.Unit(65))
 d = g.Drawer(800, 600, 32, rf)
 d.initialize("Square Funnel")
-d.color = g.DARKCYAN #ИЗМЕНИТЬ
+d.color = g.DARKCYAN 
 d.draw_axes(-0.2, 11.0, -0.2, 8.5)
-d.color = g.BLACK #ИЗМЕНИТЬ
+d.color = g.BLACK 
 
 L = np.matrix([
     [2.0, 0.5, 1],
