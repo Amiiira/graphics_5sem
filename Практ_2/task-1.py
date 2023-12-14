@@ -31,21 +31,16 @@ while True:
     sc.fill(WHITE)
 
     # Отрезок L
-    pg.draw.line(sc, LAVANDER, (matrix[0][0],matrix[0][1]),(matrix[1][0],matrix[1][1]), 2)
+    pg.draw.line(sc, LAVANDER, (matrix[0][0],matrix[0][1]),(matrix[1][0],matrix[1][1]), 4)
     
     # Новый отрезок L
-    pg.draw.line(sc, BLUE, (t_matrix[0][0],t_matrix[0][1]),(t_matrix[1][0],t_matrix[1][1]), 2)
+    pg.draw.line(sc, BLUE, (t_matrix[0][0],t_matrix[0][1]),(t_matrix[1][0],t_matrix[1][1]), 4)
 
     # Середина М
     pg.draw.circle(sc, DARKCYAN, (mid_point[0],mid_point[1]), 5)
 
     # Новая середина М
     pg.draw.circle(sc, PINK, (mid_transformed[0],mid_transformed[1]), 5)
-
-    # Tекст
-    font = pg.font.Font(None, 36)
-    text = font.render("Эта библиотека прекрасна!", True, PINK)
-    sc.blit(text, (100, 400))
 
     
     pg.display.flip()
